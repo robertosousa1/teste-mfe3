@@ -9,18 +9,9 @@ export default defineConfig({
       name: "mfe3",
       filename: "remoteEntry.js",
       exposes: {
-        "./App": "./src/App.tsx",
+        "./App": "./src/App",
       },
-      shared: {
-        react: {
-          singleton: true,
-          requiredVersion: "^18.0.0",
-        },
-        "react-dom": {
-          singleton: true,
-          requiredVersion: "^18.0.0",
-        },
-      },
+      shared: ["react", "react-dom"],
     }),
   ],
   server: {
@@ -38,12 +29,5 @@ export default defineConfig({
     cssCodeSplit: false,
     outDir: "dist",
     assetsDir: "", // Isso evita que o remoteEntry.js vá para a pasta assets
-    rollupOptions: {
-      output: {
-        entryFileNames: `[name].js`,
-        chunkFileNames: `[name].js`,
-        assetFileNames: `[name].[ext]`,
-      },
-    },
   },
 });

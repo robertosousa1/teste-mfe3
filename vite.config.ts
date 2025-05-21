@@ -9,7 +9,7 @@ export default defineConfig({
       name: "mfe3",
       filename: "remoteEntry.js",
       exposes: {
-        "./App": "./src/App",
+        "./App": "./src/App.tsx",
       },
       shared: ["react", "react-dom"],
     }),

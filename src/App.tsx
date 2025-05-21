@@ -13,9 +13,9 @@ function App() {
 
   return (
     <>
-      <h1>MFE 3</h1>
+      <h1>MFE 1</h1>
       <div className="card">
-        <button className="btn btn-success" onClick={handleCount}>
+        <button className="btn btn-warning" onClick={handleCount}>
           count is {count}
         </button>
       </div>

@@ -38,5 +38,12 @@ export default defineConfig({
     cssCodeSplit: false,
     outDir: "dist",
     assetsDir: "", // Isso evita que o remoteEntry.js vá para a pasta assets
+    rollupOptions: {
+      output: {
+        entryFileNames: `[name].js`,
+        chunkFileNames: `[name].js`,
+        assetFileNames: `[name].[ext]`,
+      },
+    },
   },
 });
